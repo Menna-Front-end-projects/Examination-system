@@ -16,7 +16,7 @@ function checkAuth() {
   }
 
   if (!examStarted || examStarted !== "true") {
-    window.location.replace("home.html");
+    window.location.replace("index.html");
     return;
   }
 }
