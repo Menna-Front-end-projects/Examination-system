@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class=" flex justify-center items-center min-h-screen bg-gradient-to-br from-[#1B3C53] via-[#456882] to-[#D2C1B6] p-6">
+
+
+    <div class=" bg-white/95 backdrop-blur-md rounded-[2rem] shadow-2xl p-8 md:p-12 max-w-3xl w-full flex flex-col items-center border border-white/40 ">
+        <div class=" w-28 h-28 py-5 my-6 bg-[#D2C1B6] rounded-full flex justify-center">
+            <img src="./images/happiness.png" class=" w-20  rounded-full" alt="">
+        </div>
+
+        <div class="flex flex-col  items-center px-4 mb-10">
+
+            <div class="text-center mb-10">
+            <h2 class="text-[#1B3C53] text-4xl font-black mb-3">Congratulations!</h2>
+            <p class="text-[#456882] font-medium text-lg">You have successfully completed the examination</p>
+        </div>
+
+            <!--  circle progress -->
+
+            <div class="  rounded-2xl ">
+                <div class="relative w-40 h-40 mx-auto pt-8">
+                    <svg class="w-full h-full rotate-[-90deg]" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="45" stroke="#e5e7eb" stroke-width="10" fill="none" />
+                        <circle id="progressCircle" cx="50" cy="50" r="45" stroke="#22c55e" stroke-width="10"
+                            fill="none" stroke-linecap="round" stroke-dasharray="283" stroke-dashoffset="283"
+                            style="transition: stroke-dashoffset 1.5s ease;" />
+                    </svg>
+
+                    <div class="absolute inset-0 flex flex-col items-center justify-center">
+                        <span id="score" class="text-3xl font-bold text-gray-800 pt-8"></span>
+                        <span class="text-xs text-gray-400">Score</span>
+                    </div>
+                </div>
+
+                <!-- total questions -->
+
+                <div class="flex flex-col lg:flex-row w-full ">
+                    <div class="flex justify-between p-3 gap-5 lg:gap-5 m-5 rounded-lg bg-[#D2C1B6]">
+                        <div class="flex gap-2 items-center bg-[#D2C1B6]/30">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="size-6 text-[#456882]">
+                                <path fill-rule="evenodd"
+                                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm11.378-3.917c-.89-.777-2.366-.777-3.255 0a.75.75 0 0 1-.988-1.129c1.454-1.272 3.776-1.272 5.23 0 1.513 1.324 1.513 3.518 0 4.842a3.75 3.75 0 0 1-.837.552c-.676.328-1.028.774-1.028 1.152v.75a.75.75 0 0 1-1.5 0v-.75c0-1.279 1.06-2.107 1.875-2.502.182-.088.351-.199.503-.331.83-.727.83-1.857 0-2.584ZM12 18a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <p class="text-xs font-bold text-[#456882] uppercase mb-1">Total Questions</p>
+                        </div>
+                        <p id="total"></p>
+                    </div>
+                    <div class="flex justify-between p-3 gap-5 lg:gap-5  m-5 rounded-lg bg-[#D2C1B6]">
+                        <div class="flex gap-2 items-center ">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="size-6 text-[#456882]">
+                                <path fill-rule="evenodd"
+                                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <p class="text-xs font-bold text-[#456882] uppercase mb-1">Correct Answers</p>
+                        </div>
+                        <p id="correctAns"></p>
+                    </div>
+                   
+                </div>
+
+                <!-- login -->
+                <div class=" m-5 flex flex-col gap-8 lg:flex-row">
+                    <button onclick="goLogin()"
+                        class="w-full bg-gradient-to-r from-[#1B3C53] to-[#456882] text-white py-3 rounded-xl font-semibold ">
+                        ← Back to Login
+                    </button>
+                     <button onclick="goExam()"
+                        class="w-full bg-gradient-to-r from-[#5F788C] to-[#1B3C53] text-white py-3 rounded-xl font-semibold ">
+                        ReTake The Exam ?
+                    </button>
+                </div>
+
+                <!-- reExam -->
+                <div class=" m-5">
+                   
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./js/gaurd.js"></script>
+
+    <script src="./js/result.js"></script>
+</body>
+
+</html>

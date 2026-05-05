@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time's Up</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+ 
+</head>
+
+<body class="flex justify-center items-center min-h-screen bg-gradient-to-br from-[#1B3C53] via-[#456882] to-[#D2C1B6] p-4">
+
+    <div class="animate-pop bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden max-w-lg w-full border border-white/20">
+        
+        <div class="flex flex-col items-center pt-10 pb-6">
+            <div class="relative">
+                <div class="absolute inset-0 bg-[#D2C1B6] rounded-full animate-ping opacity-20"></div>
+                <div class="relative w-32 h-32 bg-[#D2C1B6] rounded-full flex justify-center items-center shadow-inner border-4 border-white">
+                    <img src="./images/sad.png" class="w-20 grayscale-20 hover:grayscale-0 transition-all duration-300" alt="Time Up Icon">
+                </div>
+            </div>
+
+            <div class="mt-6 text-center px-6">
+                <h2 id="user-name" class="text-[#1B3C53] text-4xl font-black tracking-tight mb-2"></h2>
+                <p class="text-[#456882] font-medium opacity-80 uppercase tracking-widest text-sm">Exam Session Ended</p>
+            </div>
+        </div>
+
+        <div class="px-8 pb-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                
+                <div class="group flex items-center justify-between p-4 rounded-2xl bg-[#D2C1B6]/30 border border-[#D2C1B6] transition-all hover:bg-[#D2C1B6]/50">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-white p-2 rounded-lg shadow-sm text-[#1B3C53]">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <span class="font-bold text-[#1B3C53]">Answered</span>
+                    </div>
+                    <span id="total" class="text-2xl font-black text-[#1B3C53]"></span>
+                </div>
+
+                <div class="group flex items-center justify-between p-4 rounded-2xl bg-slate-100 border border-slate-200 transition-all hover:bg-red-50 hover:border-red-200">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-white p-2 rounded-lg shadow-sm text-slate-400 group-hover:text-red-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <span class="font-bold text-slate-600 group-hover:text-red-600">Left</span>
+                    </div>
+                    <span id="left" class="text-2xl font-black text-slate-600 group-hover:text-red-600"></span>
+                </div>
+
+            </div>
+
+            <button onclick="goResult()"
+                class="group relative w-full overflow-hidden bg-gradient-to-r from-[#1B3C53] to-[#456882] text-white py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-[#1B3C53]/40 transition-all active:scale-95">
+                <span class="relative z-10 flex items-center justify-center gap-2">
+                    View Results
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 group-hover:translate-x-1 transition-transform">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                    </svg>
+                </span>
+            </button>
+        </div>
+    </div>
+
+    <script src="./js/gaurd.js"></script>
+
+    <script src="./js/timeUp.js"></script>
+</body>
+
+</html>

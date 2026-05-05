@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exam</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-[#EFEBE7]">
+    <nav class="flex items-center justify-between gap-3 bg-[#F3F1EE]  px-7 py-4 shadow-sm">
+        <div class="flex items-center gap-3">
+            <h1 class="text-[#c7b0a1] text-2xl font-serif">Welcome</h1>
+            <h1 id="user-name" class="text-[#1B3C53] font-bold text-[40px]"></h1>
+        </div>
+
+        <div class="">
+            <img class="mx-auto mb-2 rounded-3xl border-4 w-13 border-white/20 shadow-lg" src="./images/user-graduate.svg"
+                alt="img">
+        </div>
+
+    </nav>
+
+    <div class=" flex flex-col md:flex-row justify-between items-center p-7 bg-[#F3F1EE] rounded-xl m-15 shadow-md">
+        <div>
+            <p class="text-[20px] text-[#1B3C53] font-serif font-bold">OOP Final Exam</p>
+        </div>
+
+     <!--         timer      -->
+
+        <div >
+            <div class="mt-4 md:mt-0 flex items-baseline justify-center gap-2 font-black tracking-tighter text-[#1B3C53]">
+                <div class="flex flex-col items-center">
+                    <span id="minutes" class="text-3xl md:text-3xl">10</span>
+                    <span class="text-xs uppercase tracking-[0.4em] text-[#D2C1B6] ">Mins</span>
+                </div>
+
+                <span class="text-5xl md:text-3xl text-[#D2C1B6] self-start mt-2">:</span>
+
+                <div class="flex flex-col items-center">
+                    <span id="seconds" class="text-3xl md:text-3xl">00</span>
+                    <span class="text-xs uppercase tracking-[0.4em] text-[#D2C1B6] ">Secs</span>
+                </div>
+            </div>
+
+            
+        </div>
+
+    </div>
+
+        <!--         questions      -->
+
+    <div id="question-container" class="bg-[#F3F1EE] rounded-xl m-15 shadow-md p-7">
+
+            <!--              mark      -->
+        <div class="flex justify-between text-[#456882] mb-15">
+            <span id="question-count" class="border  rounded-3xl p-1">Question 1/10</span>
+            
+            <div id="mark" class="flex gap-2 items-center cursor-pointer select-none hover:opacity-80 transition">
+                <span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                        <path
+                            d="M3.5 2.75a.75.75 0 0 0-1.5 0v14.5a.75.75 0 0 0 1.5 0v-4.392l1.657-.348a6.449 6.449 0 0 1 4.271.572 7.948 7.948 0 0 0 5.965.524l2.078-.64A.75.75 0 0 0 18 12.25v-8.5a.75.75 0 0 0-.904-.734l-2.38.501a7.25 7.25 0 0 1-4.186-.363l-.502-.2a8.75 8.75 0 0 0-5.053-.439l-1.475.31V2.75Z" />
+                    </svg>
+                </span>
+                <span>Mark for review</span>
+            </div>
+        </div>
+
+
+        <div>
+            <p id="question-text" class="text-balance"></p>
+        </div>
+
+
+
+
+        <div id="answers-grid" >
+
+
+        </div>
+
+
+    </div>
+
+
+
+<div class=" bg-[#F3F1EE] rounded-xl m-15 shadow-md p-7 space-y-6">
+  <p>Questions Navigator</p>
+
+  <div id="navigator-list"  class="grid grid-cols-4 md:grid-cols-10 justify-around gap-2 ">
+   
+   
+  
+
+</div>
+
+
+<div class="space-y-3 ">
+
+<div class="flex gap-2 items-center">
+    <span class="bg-slate-800 rounded-full w-5 h-5 px-2  border border-slate-800"> </span>
+    <span>Answerd</span>
+</div>
+
+<div class="flex gap-2 items-center">
+    <span class="bg-orange-100 rounded-full w-5 h-5 px-2  border border-orange-300"> </span>
+    <span>Marked</span>
+</div>
+
+
+<div class="flex gap-2 items-center">
+    <span class="bg-gray-100 rounded-full w-5 h-5 px-2  border border-gray-400"> </span>
+    <span> not answerd</span>
+</div>
+
+<div class=" flex flex-row-reverse">
+    <button id="submit" type="submit" class="px-8 bg-gradient-to-r from-[#1B3C53] to-[#456882] text-white font-bold py-3 rounded-lg hover:bg-[#456882] transition duration-300 shadow-lg">Submit Exam</button>
+</div>
+</div>
+
+
+
+</div>
+
+
+
+<script src="./js/gaurd.js"></script>
+
+<script src="./js/examPage.js"></script>
+
+
+</body>
+
+</html>

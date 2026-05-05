@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExamPro - Welcome</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-r from-[#1B3C53] via-[#456882] to-[#D2C1B6] flex items-center justify-center p-6">
+
+    <div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+        <div class="text-white space-y-8 animate-fade-in">
+            <div class="flex items-center gap-4">
+                <img src="./images/user-graduate.svg" alt="Logo"
+                    class="rounded-2xl border-2 w-20 border-white/20 shadow-lg">
+                <div>
+                    <h1 class="text-5xl font-extrabold tracking-tight">ExamPro</h1>
+                    <p class="text-white/80 text-lg italic">Master Your Future</p>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <h2 class="text-4xl font-bold leading-tight">The ultimate platform for <span class="text-[#D2C1B6]">academic excellence.</span></h2>
+                <p class="text-lg text-white/90 leading-relaxed">
+                    Join thousands of students who trust ExamPro for their certification and examination needs. 
+                    Our smart algorithm ensures a unique testing experience every time you log in.
+                </p>
+                
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-3">
+                        <span class="bg-white/20 p-2 rounded-full">✓</span>
+                        <span>Randomized Question Banks for fair testing</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="bg-white/20 p-2 rounded-full">✓</span>
+                        <span>Real-time performance analytics</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="bg-white/20 p-2 rounded-full">✓</span>
+                        <span>Secure session management</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="pt-4">
+                <p class="text-sm text-white/60">Already have an account? 
+                    <a href="login.html" class="text-white font-bold underline hover:text-[#D2C1B6]">Login here</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md mx-auto">
+            <h2 class="text-[#1B3C53] text-3xl font-bold mb-2 text-center">Create Account</h2>
+            <p class="text-center text-gray-500 mb-8">Sign up to access your exam dashboard</p>
+
+            <form class="space-y-4" onsubmit="FormValidation(event)">
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-[#1B3C53] text-sm font-semibold mb-1">First Name</label>
+                        <input type="text" id="Fname" onblur="FnameValidation()"
+                            class="w-full px-4 py-2 rounded-lg border border-[#456882] focus:outline-none focus:ring-2 focus:ring-[#1B3C53]"
+                            placeholder="David">
+                        <p id="errorMsg" class="text-red-500 text-[10px] font-semibold mt-1"></p>
+                    </div>
+                    <div>
+                        <label class="block text-[#1B3C53] text-sm font-semibold mb-1">Last Name</label>
+                        <input type="text" id="Lname" onblur="LnameValidation()"
+                            class="w-full px-4 py-2 rounded-lg border border-[#456882] focus:outline-none focus:ring-2 focus:ring-[#1B3C53]"
+                            placeholder="Henry">
+                        <p id="errorMsg2" class="text-red-500 text-[10px] font-semibold mt-1"></p>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-[#1B3C53] text-sm font-semibold mb-1">Email Address</label>
+                    <input type="email" id="myEmail" onblur="emailValidation()"
+                        class="w-full px-4 py-2 rounded-lg border border-[#456882] focus:outline-none focus:ring-2 focus:ring-[#1B3C53]"
+                        placeholder="example@gmail.com">
+                    <p id="errorEmail" class="text-red-500 text-[10px] font-semibold mt-1"></p>
+                </div>
+
+                <div>
+                    <label class="block text-[#1B3C53] text-sm font-semibold mb-1">Password</label>
+                    <input type="password" onblur="passValidation()" id="pass"
+                        class="w-full px-4 py-2 rounded-lg border border-[#456882] focus:outline-none focus:ring-2 focus:ring-[#1B3C53]"
+                        placeholder="••••••••">
+                    <p id="errorPass" class="text-red-500 text-[10px] font-semibold mt-1"></p>
+                </div>
+
+                <div>
+                    <label class="block text-[#1B3C53] text-sm font-semibold mb-1">Confirm Password</label>
+                    <input type="password" onblur="rePassValidation()" id="repass"
+                        class="w-full px-4 py-2 rounded-lg border border-[#456882] focus:outline-none focus:ring-2 focus:ring-[#1B3C53]"
+                        placeholder="••••••••">
+                    <p id="errorMsgRePass" class="text-red-500 text-[10px] font-semibold mt-1"></p>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-gradient-to-r from-[#1B3C53] to-[#456882] text-white font-bold py-3 rounded-lg hover:opacity-90 transition duration-300 shadow-lg mt-4">
+                    Start Your Journey
+                </button>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="./js/gaurd.js"></script>
+    <script src="./js/register.js"></script>
+</body>
+
+</html>
